@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(244, 223, 251);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    min-height: 500px;
+    max-height: auto;
+    width: 600px;
+    text-align: center;
+    position: relative;
+}
+header{
+    background-color: rgb(205, 100, 237);
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 50px;
+    color: aliceblue;
+}
+#alltask{
+    background-color: rgb(251, 249, 246);
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 50px;
+    box-shadow: 0px 0px 15px 3px white;
+}
+#task{
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family:cursive;
+}
+.but{
+    margin: 15px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    color: azure;
+    transition: 0.3s transform;
+}
+.but:hover{
+    border: 2px solid black;
+    cursor: pointer;
+}
+.but:active{
+transform: scale(0.95);
+}
+#doneBut{
+    background-color: rgb(68, 202, 68);
+}
+#delBut{
+    background-color: rgb(238, 45, 45);
+}
+#editBut{
+    background-color: rgb(253, 119, 3);
+}
+#ntask{
+position: absolute;
+bottom: 40px;
+left: 50%;
+transform: translateX(-50%);
+width: min(250px, 80%);
+height: 40px;
+border-radius: 15px;
+padding: 10px;
+font-size: medium;
+font-weight: bold;
+outline: none;
+border: 2px solid black;
+color: blueviolet;
+text-align: center;
+}
+#ntask:focus{
+border: 2px solid rgb(221, 156, 243);
+box-shadow: 0px 0px 15px 2px rgb(251, 213, 250);
+}
+#add{
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+top:465px;
+width: 150px;
+height: 40px;
+background-color:rgb(205, 100, 237) ;
+color: white;
+font-size: medium;
+}
+#clr{
+    background-color: rgb(222, 12, 12);
+    position: absolute;
+    bottom: 50px;
+    left: 47%;
+    width: 100px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    #container {
+        width: 100%;
+    }
+
+    #alltask {
+        padding: 25px 15px;
+    }
+
+    #clr {
+        left:43%;
+        margin-top: 15px;
+        width: 100px;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    #container {
+        min-height: 520px;
+    }
+
+    header {
+        height: auto;
+        min-height: 60px;
+        margin-bottom: 25px;
+        padding: 15px 10px;
+    }
+
+    #alltask {
+        height: 280px;
+        padding: 20px 8px;
+    }
+
+    #task {
+        font-size: 1em;
+    }
+
+    .but {
+        margin: 8px 3px;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    #ntask {
+        bottom: 45px;
+        width: 80%;
+    }
+
+    #add {
+        top: 465px;
+        width: 130px;
+        margin-top: 25px;
+    }
+
+    #clr {
+        width: 90px;
+        padding: 8px;
+        left:40%;
+    }
+}
